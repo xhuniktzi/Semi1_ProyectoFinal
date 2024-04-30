@@ -1,0 +1,97 @@
+.container {
+  margin-top: 50px;
+}
+
+.form-container {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.form-title {
+  text-align: center;
+  color: #ff6600;
+}
+
+.form-label {
+  color: #ff6600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ff6600;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #333333;
+  color: white;
+  transition: all 0.3s ease; /* Agregamos transición para suavizar cambios */
+}
+
+.form-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease; /* Agregamos transición para suavizar cambios */
+}
+
+.form-button:hover {
+  background-color: #cc5500;
+  transform: scale(1.05); /* Efecto de aumento al hacer hover */
+}
+
+.form-button:disabled {
+  background-color: #666666;
+  cursor: not-allowed;
+}
+
+/* Definimos la animación de fadeIn */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Aplicamos la animación de fadeIn */
+@-webkit-keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.form-container {
+  animation: fadeIn 0.5s ease;
+  -webkit-animation: fadeIn 0.5s ease;
+}

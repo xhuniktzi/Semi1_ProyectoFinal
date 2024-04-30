@@ -1,0 +1,80 @@
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  height: 100%;
+
+  stream-channel-list {
+    width: 30%;
+  }
+
+  stream-channel {
+    width: 100%;
+  }
+
+  stream-thread {
+    width: 45%;
+  }
+}
+
+.chat-container {
+  list-style-type: none;
+  padding: 0;
+
+  .bot-message, .user-message, .system-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .bot-message {
+    background-color: #FFA500; // Naranja
+    color: black;
+  }
+
+  .user-message {
+    background-color: black;
+    color: white;
+  }
+
+  .system-message {
+    background-color: #FFA500; // Naranja
+    color: black;
+  }
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #FFA500; // Naranja
+    border-radius: 5px 0 0 5px;
+  }
+
+  .send-button {
+    background-color: #FFA500; // Naranja
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #FF8C00; // Naranja más oscuro
+    }
+  }
+}

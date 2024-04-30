@@ -1,0 +1,18 @@
+<ul class="chat-container">
+  <li *ngFor="let message of message_list">
+    <div *ngIf="message.sender === 'bot'" class="bot-message">
+      <p>BOT: {{ message.message }}</p>
+    </div>
+    <div *ngIf="message.sender === 'user'" class="user-message">
+      <p>ME: {{ message.message }}</p>
+    </div>
+    <div *ngIf="message.sender === 'system'" class="system-message">
+      <p>SYSTEM: {{ message.message }}</p>
+    </div>
+  </li>
+</ul>
+
+<form class="message-form">
+  <input type="text" [(ngModel)]="message" name="message" placeholder="Escribe un mensaje..." />
+  <button class="send-button" (click)="sendMessage()">Enviar</button>
+</form>

@@ -1,0 +1,22 @@
+<div class="container">
+    <form class="firefighter-form">
+        <label class="form-label" for="direction">Dirección:</label>
+        <input class="form-input" type="text" id="direction" name="direction" [(ngModel)]="direction">
+        <button class="form-button" (click)="submit()">Agregar</button>
+    </form>
+
+    <table class="firefighter-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let station of stations">
+                <td>{{ station.EstacionID }}</td>
+                <td>{{ station.Direccion }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

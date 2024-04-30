@@ -1,0 +1,68 @@
+<div class="container">
+  <form class="firefighter-form" [@fadeIn]>
+    <label for="type">Tipo:</label>
+    <input type="text" id="type" name="type" [(ngModel)]="type" />
+    <label for="kilometers">Kilometros:</label>
+    <input
+      type="number"
+      id="kilometers"
+      name="kilometers"
+      [(ngModel)]="kilometers"
+    />
+    <label for="station">Estacion:</label>
+    <select id="station" name="station" [(ngModel)]="station">
+      <option value="0" disabled selected>Selecciona una estacion</option>
+      <option *ngFor="let station of stations" [value]="station.EstacionID">
+        {{ station.Direccion }}
+      </option>
+    </select>
+    <button class="form-button" (click)="submit()">Agregar</button>
+  </form>
+
+  <form class="firefighter-form" [@fadeIn]>
+    <label for="selectedStation">Estacion:</label>
+    <select
+      id="selectedStation"
+      name="selectedStation"
+      [(ngModel)]="selectedStation"
+      (change)="onChangeStation()"
+    >
+      <option value="0" disabled selected>Selecciona una estacion</option>
+      <option *ngFor="let station of stations" [value]="station.EstacionID">
+        {{ station.Direccion }}
+      </option>
+    </select>
+  </form>
+
+  <table class="firefighter-table" [@fadeIn]>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Tipo</th>
+        <th>Estacion</th>
+        <th>Kilometraje</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicle of vehicles">
+        <td>{{ vehicle.Placa }}</td>
+        <td>{{ vehicle.Tipo }}</td>
+        <td>{{ vehicle.EstacionID }}</td>
+        <td>
+          <input
+            type="number"
+            id="newKilometers"
+            name="newKilometers"
+            [(ngModel)]="vehicle.KilometrajeActual"
+          />
+        </td>
+        <td>
+          <button class="form-button" (click)="update(vehicle.Placa)">
+            Actualizar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

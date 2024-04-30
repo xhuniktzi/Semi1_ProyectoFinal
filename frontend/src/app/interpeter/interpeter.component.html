@@ -1,0 +1,7 @@
+<form class="firefighter-form">
+    <label class="form-label" for="text">Texto:</label>
+    <input class="form-input" type="text" id="text" name="text" [(ngModel)]="text">
+    <label class="form-label" for="language">Idioma:</label>
+    <input class="form-input" type="text" id="language" name="language" [(ngModel)]="language">
+    <button class="form-button" (click)="translate()">Traducir</button>
+</form>

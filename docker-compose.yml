@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - backend/.env  # Especifica el archivo .env aquí
+    # command: pipenv run gunicorn --workers=3 --bind=0.0.0.0:5000 app:app
+    networks:
+      - semi1
+networks:
+  semi1:
+    external: true

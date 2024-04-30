@@ -1,0 +1,71 @@
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+
+  .profile-section {
+    flex: 1;
+    margin-right: 20px;
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+
+      .profile-image {
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      div {
+        h2 {
+          color: #FFA500; // Naranja
+          margin-bottom: 10px;
+        }
+
+        .nickname, .name {
+          color: black;
+        }
+
+        ul {
+          padding: 0;
+          list-style: none;
+          margin-top: 10px;
+
+          li {
+            margin-bottom: 5px;
+            button {
+              background-color: #FFA500; // Naranja
+              color: black;
+              border: none;
+              padding: 5px 10px;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                background-color: #FF8C00; // Naranja más oscuro
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content-section {
+    flex: 2;
+
+    .description {
+      color: black;
+      background-color: #FFA500; // Naranja
+      padding: 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #FF8C00; // Naranja más oscuro
+      }
+    }
+  }
+}

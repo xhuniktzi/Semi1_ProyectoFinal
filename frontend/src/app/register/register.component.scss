@@ -1,0 +1,80 @@
+.container {
+  margin-top: 50px;
+  background-color: #1a1a1a; /* Fondo negro */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.image-container {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff6600; /* Naranja */
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ff6600; /* Naranja */
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #333333; /* Fondo gris oscuro */
+  color: white;
+}
+
+.btn-primary {
+  background-color: #ff6600; /* Naranja */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.btn-primary:hover {
+  background-color: #cc5500; /* Naranja más oscuro */
+  transform: scale(1.05); /* Efecto de aumento al hacer hover */
+}
+
+.text-center {
+  text-align: center;
+  color: #ff6600; /* Naranja */
+}
+
+/* Animación de fade in */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeInAnimation 0.5s ease; /* Aplicar animación al cargar */
+}
